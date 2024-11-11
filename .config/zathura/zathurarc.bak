@@ -1,0 +1,72 @@
+### zathura-pywal ###
+# Allow recolor
+set recolor 'true'
+
+# Don't allow original hue when recoloring
+set recolor-keephue 'false'
+
+# Don't keep original image colors while recoloring
+set recolor-reverse-video 'false'
+
+# Command line completion entries
+set completion-fg '#eff1f3'
+set completion-bg '#5a4948'
+
+# Command line completion group elements
+set completion-group-fg '#C9BDC4'
+set completion-group-bg '#5a4948'
+
+# Current command line completion element
+set completion-highlight-fg '#5a4948'
+set completion-highlight-bg '#eff1f3'
+
+# Default foreground/background color
+set default-bg rgba(90,73,72,1)
+
+# Input bar
+set inputbar-fg '#eff1f3'
+set inputbar-bg '#5a4948'
+
+# Notification
+set notification-fg '#eff1f3'
+set notification-bg '#5a4948'
+
+# Error notification
+set notification-error-fg '#eff1f3'
+set notification-error-bg '#C4C1BF'
+
+# Warning notification
+set notification-warning-fg '#eff1f3'
+set notification-warning-bg '#C4C1BF'
+
+# Tab - TODO
+# set tabbar-fg
+# set tabbar-bg
+
+# Focused tab - TODO
+# set tabbar-focus-fg
+# set tabbar-focus-bg
+
+# Status bar
+set statusbar-fg '#eff1f3'
+set statusbar-bg '#5a4948'
+
+# Highlighting parts of the document (e.g. show search results)
+set highlight-color '#C9BDC4'
+set highlight-active-color '#C9BDC4'
+
+# Represent light/dark colors in recoloring mode
+set recolor-lightcolor rgba(0,0,0,0)
+set recolor-darkcolor '#eff1f3'
+
+# 'Loading...' text
+set render-loading-fg '#eff1f3'
+set render-loading-bg '#5a4948'
+
+# Index mode
+set index-fg '#eff1f3'
+set index-bg '#5a4948'
+
+# Selected element in index mode
+set index-active-fg '#5a4948'
+set index-active-bg '#eff1f3'

@@ -1,0 +1,127 @@
+configuration {
+	font:							                "CaskaydiaMono Nerd Font 11";
+    show-icons:                     true;
+	
+  icon-theme: 					            "Papirus";
+    display-drun: 					        "";
+    drun-display-format:            "{name}";
+    disable-history:                true;
+    fullscreen:                     false;
+	
+  hide-scrollbar: 				          true;
+	sidebar-mode: 					          false;
+}
+
+@import "colors.rasi"
+
+window {
+    transparency:                   "real";
+    background-color:               @bg;
+    text-color:                     @bg1;
+	
+  border:							              8px;
+	  border-color:					          @bg;
+    border-radius:                  2px;
+	
+  width:							              300px;
+    location:                       north;
+    x-offset:                       0;
+    y-offset:                       60;
+}
+
+prompt {
+    enabled: 						            true;
+	  padding: 						            13px 10px 12px 10px;
+	  background-color: 				      @bg1;
+	  text-color: 					          @bg;
+	  font:							              "CaskaydiaMono Nerd Font 12";
+}
+
+textbox-prompt-colon {
+	  padding: 						           11px 15px 10px 15px;
+	  font:							             "CaskaydiaMono Nerd Font 11";
+	  background-color: 				     @bg1;
+	  text-color: 					         @bg;
+	  expand: false;
+	  str: "";
+}
+
+entry {
+    background-color:               @bg1;
+    text-color:                     @bg;
+    placeholder-color:              @bg;
+    expand:                         true;
+    horizontal-align:               0;
+    placeholder:                    "UwU";
+	
+  padding: 						              15px 0px 0px 10px;
+    margin:                         0px 250px 0px 0px;
+    border-radius:                  0px 50px 50px 0px;
+    blink:                          true;
+}
+
+inputbar {
+	children: 						            [ textbox-prompt-colon, prompt ];
+    background-color:               @bg1;
+    text-color:                     @bg;
+    expand:                         false;
+	
+  border:							              0px;
+    border-radius:                  0px;
+	  border-color:					          @ac;
+    spacing:                        0px;
+}
+
+listview {
+    background-color:               @al;
+    padding:                        10px 0px 10px 0px;
+    columns:                        1;
+    lines:                          5;
+    spacing:                        10px;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               @al;
+	border:							              4px;
+    border-radius:                  4px;
+	border-color:					            @bg1;
+    children:                       [ inputbar, listview ];
+    spacing:                       	5px;
+    padding:                        0px;
+}
+
+element {
+    background-color:               @al;
+    text-color:                     @fg;
+    orientation:                    horizontal;
+    border-radius:                  3px;
+	padding: 						0px;
+}
+
+element-icon {
+    background-color:               transparent;
+    text-color:               		  inherit;
+    size:                           24px;
+    border:                         2px;
+}
+
+element-text {
+    background-color:               transparent;
+    text-color:               		  inherit;
+    expand:                         true;
+    horizontal-align:               0;
+    vertical-align:                 0.5;
+    margin:                         0px 3px 0px 3px;
+}
+
+element selected {
+    background-color:               @bg1;
+    text-color:                     @bg;
+	
+  border:							              0px;
+    border-radius:                  0px;
+    border-color:                  	@bg1;
+}

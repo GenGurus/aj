@@ -1,0 +1,25 @@
+#!/bin/sh
+
+export XAUTHORITY=/home/RenderHam/.Xauthority
+export DISPLAY=:0
+export DBUS_SESSION_BU_ADDRESS="unix=path=/run/user/1000/bus"
+
+STATE=$1
+case "$STATE" in
+
+"crit")
+  SUMMARY="☘ Battery Weeping: ﱉ"
+  ICON="$HOME/.config/wired/assets/cry.png"
+  ;;
+
+"warn")
+  SUMMARY="⚡ ! SHOCK ! ⚡"
+  ICON="$HOME/.config/wired/assets/angy.png"
+  ;;
+esac
+
+notify-send -a System \
+  -u normal \
+  -h string:wired-tag:System \
+  -i "${ICON}" \
+  "${SUMMARY}"

@@ -1,0 +1,7 @@
+#!/bin/sh
+status=$(cat /sys/class/power_supply/BAT1/status)
+capacity=$(cat /sys/class/power_supply/BAT1/capacity)
+
+if [ "$status" = Discharging -a "$capacity" -lt 10 ]; then
+  systemctl suspend-then-hibernate
+fi

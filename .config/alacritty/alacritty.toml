@@ -1,0 +1,34 @@
+import = ["~/.cache/wal/colors-alacritty.toml"]
+
+live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+decorations = "buttonless"
+dynamic_padding = false
+opacity = 1
+
+[window.padding]
+x = 15
+y = 15
+
+[font]
+size = 11.5
+
+[font.bold]
+family = "CaskaydiaMono NFM"
+style = "Heavy"
+
+[font.bold_italic]
+family = "CaskaydiaMono NFM"
+style = "Heavy Italic"
+
+[font.italic]
+family = "CaskaydiaMono NFM"
+style = "Medium Italic"
+
+[font.normal]
+family = "CaskaydiaMono NFM"
+style = "Medium"

@@ -1,0 +1,24 @@
+#!/bin/sh
+
+export XAUTHORITY=~/.Xauthority
+export DISPLAY=:0
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
+
+STATE=$1
+case "$STATE" in
+	
+  "plug")   SUPPORT="☘ Life Support: ☘" ;
+            ICON="$HOME/.config/wired/assets/cry.png"
+            ;;
+	
+  "unplug") SUPPORT="☢ Life Support ☢" ;
+            ICON="$HOME/.config/wired/assets/angy.png"
+            ;;
+esac
+
+notify-send -a System \
+            -u normal \
+            -h string:wired-tag:System \
+            -i "${ICON}" \
+            "${SUPPORT}" \
+
