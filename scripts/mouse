@@ -1,0 +1,6 @@
+#!/bin/sh
+
+xinput set-prop 'ELAN050B:01 04F3:312B Touchpad' "libinput Tapping Enabled" 1
+xinput set-prop 'ELAN050B:01 04F3:312B Touchpad' "libinput Accel Speed" 0.8
+xinput set-prop 'ELAN050B:01 04F3:312B Mouse' "libinput Accel Speed" 0.8
+xsetroot -cursor_name left_ptr

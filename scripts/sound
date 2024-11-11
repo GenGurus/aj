@@ -1,0 +1,9 @@
+#!/bin/sh
+
+proc=("pipewire","pipewire-pulse","wireplumber")
+
+for i in "${proc[@]}"; do
+  if ! pgrep -f "$proc" > /dev/null; then
+    $i
+  fi
+done

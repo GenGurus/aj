@@ -1,0 +1,13 @@
+#!/bin/bash
+
+inputs=("keyevent 26",
+        "touchscreen swipe 530 1600 530 1000",
+        "text 852456",
+        "keyevent 66",
+        "touchscreen swipe 530 1600 530 1000")
+
+for i in "${inputs[@]}"; do
+  #sleep 3
+  adb shell input $i
+  echo adb shell input $i
+done

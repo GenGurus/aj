@@ -1,0 +1,20 @@
+#!/bin/sh
+
+picom_off() {
+  sed -i '/animations = true;/c\animations = false;' $HOME/.config/picom/light.conf
+  sed -i '/transition = true;/c\transition = false;' $HOME/.config/picom/light.conf
+  sed -i '/fading = true;/c\fading = false;' $HOME/.config/picom/light.conf
+}
+
+picom_on() {
+  sed -i '/animations = false;/c\animations = true;' $HOME/.config/picom/light.conf
+  sed -i '/transition = false;/c\transition = true;' $HOME/.config/picom/light.conf
+  sed -i '/fading = false;/c\fading = true;' $HOME/.config/picom/light.conf
+}
+
+case "$1" in
+on)
+  picom_on
+  ;;
+off) picom_off ;;
+esac
